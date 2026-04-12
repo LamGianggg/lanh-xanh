@@ -17,23 +17,60 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // ================= DATA =================
     const wasteData = [
-        // Recyclable
+        // ================= RECYCLABLE =================
+        { name: "Chai thủy tinh", type: "recyclable", desc: "Rửa sạch trước khi tái chế.", main: ["chai thủy tinh", "chai kính"] },
+        { name: "Lọ thủy tinh", type: "recyclable", desc: "Rửa sạch, tháo nắp.", main: ["lọ", "lọ thủy tinh"] },
+        { name: "Hộp giấy carton", type: "recyclable", desc: "Giữ khô, ép gọn.", main: ["carton", "thùng giấy"] },
+        { name: "Túi giấy", type: "recyclable", desc: "Không dính dầu mỡ.", main: ["túi giấy"] },
+        { name: "Giấy báo", type: "recyclable", desc: "Giữ khô.", main: ["báo", "giấy báo"] },
+        { name: "Giấy carton", type: "recyclable", desc: "Ép phẳng.", main: ["carton"] },
+        { name: "Hộp sữa giấy", type: "recyclable", desc: "Rửa sạch, ép dẹt.", main: ["hộp sữa"] },
+        { name: "Ống hút giấy", type: "recyclable", desc: "Có thể tái chế nếu sạch.", main: ["ống hút giấy"] },
+        { name: "Nắp chai nhựa", type: "recyclable", desc: "Thu gom riêng.", main: ["nắp chai"] },
+        { name: "Can nhựa", type: "recyclable", desc: "Rửa sạch.", main: ["can", "can nhựa"] },
+        { name: "Bao bì nhựa cứng", type: "recyclable", desc: "Rửa sạch.", main: ["bao bì nhựa"] },
+        { name: "Lon sữa", type: "recyclable", desc: "Ép dẹt.", main: ["lon sữa"] },
+        { name: "Kim loại vụn", type: "recyclable", desc: "Thu gom riêng.", main: ["kim loại"] },
+        { name: "Dây điện cũ", type: "recyclable", desc: "Tái chế kim loại.", main: ["dây điện"] },
+        { name: "Vỏ hộp thiếc", type: "recyclable", desc: "Làm sạch.", main: ["thiếc"] },
         { name: "Vỏ lon bia", type: "recyclable", desc: "Rửa sạch, ép dẹt trước khi bỏ.", main: ["bia", "lon bia", "vỏ bia"] },
-        { name: "Lon nước ngọt", type: "recyclable", desc: "Rửa sạch, ép dẹt.", main: ["lon nước", "nước ngọt", "lon"] },
-        { name: "Chai nhựa", type: "recyclable", desc: "Rửa sạch, bỏ nắp, ép nhẹ.", main: ["chai nhựa", "chai nước", "chai", "nhựa"] },
-        { name: "Vỏ hộp sữa", type: "recyclable", desc: "Rửa sạch, cắt nắp, ép phẳng.", main: ["hộp sữa", "sữa"] },
-        { name: "Giấy A4", type: "recyclable", desc: "Giấy sạch, bỏ vào thùng tái chế.", main: ["giấy a4", "a4", "giấy in", "giấy"] },
+        { name: "Lon nước ngọt", type: "recyclable", desc: "Rửa sạch, ép dẹt.", main: ["lon nước", "nước ngọt", "lon"] }, 
+        { name: "Chai nhựa", type: "recyclable", desc: "Rửa sạch, bỏ nắp, ép nhẹ.", main: ["chai nhựa", "chai nước", "chai", "nhựa"] }, { name: "Vỏ hộp", type: "recyclable", desc: "Rửa sạch, cắt nắp, ép phẳng.", main: ["hộp"] }, { name: "Giấy A4", type: "recyclable", desc: "Giấy sạch, bỏ vào thùng tái chế.", main: ["giấy a4", "a4", "giấy in", "giấy"] },
 
-        // Organic
-        { name: "Vỏ chuối", type: "organic", desc: "Bỏ vào thùng hữu cơ để ủ phân.", main: ["chuối", "vỏ chuối"] },
-        { name: "Vỏ cam", type: "organic", desc: "Bỏ vào thùng hữu cơ.", main: ["cam", "quýt", "vỏ cam"] },
-        { name: "Cơm thừa", type: "organic", desc: "Đậy kín tránh ruồi.", main: ["cơm", "cơm thừa"] },
-        { name: "Lá cây", type: "organic", desc: "Có thể ủ phân.", main: ["lá", "lá cây"] },
+        // ================= ORGANIC =================
+        { name: "Vỏ táo", type: "organic", desc: "Có thể ủ phân.", main: ["táo", "vỏ táo"] },
+        { name: "Vỏ dưa hấu", type: "organic", desc: "Ủ compost.", main: ["dưa hấu"] },
+        { name: "Rau thừa", type: "organic", desc: "Phân hủy nhanh.", main: ["rau"] },
+        { name: "Thức ăn thừa", type: "organic", desc: "Đậy kín.", main: ["thức ăn"] },
+        { name: "Bã cà phê", type: "organic", desc: "Ủ phân tốt.", main: ["cà phê"] },
+        { name: "Vỏ trứng", type: "organic", desc: "Giàu canxi.", main: ["trứng"] },
+        { name: "Xương cá", type: "organic", desc: "Phân hủy chậm.", main: ["xương cá"] },
+        { name: "Xương gà", type: "organic", desc: "Có thể ủ.", main: ["xương gà"] },
+        { name: "Vỏ khoai", type: "organic", desc: "Ủ phân.", main: ["khoai"] },
+        { name: "Cỏ cắt", type: "organic", desc: "Ủ compost.", main: ["cỏ"] },
+        { name: "Hoa héo", type: "organic", desc: "Phân hủy tự nhiên.", main: ["hoa"] },
+        { name: "Lá khô", type: "organic", desc: "Ủ phân.", main: ["lá khô"] },
+        { name: "Vỏ xoài", type: "organic", desc: "Ủ phân.", main: ["xoài"] },
+        { name: "Vỏ dứa", type: "organic", desc: "Ủ compost.", main: ["dứa"] },
+        { name: "Vỏ chuối", type: "organic", desc: "Bỏ vào thùng hữu cơ để ủ phân.", main: ["chuối", "vỏ chuối"] }, { name: "Vỏ cam", type: "organic", desc: "Bỏ vào thùng hữu cơ.", main: ["cam", "quýt", "vỏ cam"] }, { name: "Cơm thừa", type: "organic", desc: "Đậy kín tránh ruồi.", main: ["cơm", "cơm thừa"] }, { name: "Lá cây", type: "organic", desc: "Có thể ủ phân.", main: ["lá", "lá cây"] },
 
-        // Residual
-        { name: "Pin cũ", type: "residual", desc: "Chứa kim loại nặng, cần xử lý riêng.", main: ["pin", "pin cũ"] },
-        { name: "Đèn huỳnh quang", type: "residual", desc: "Chứa thủy ngân.", main: ["đèn", "huỳnh quang"] },
-        { name: "Khẩu trang", type: "residual", desc: "Có nguy cơ sinh học.", main: ["khẩu trang", "mặt nạ"] }
+        // ================= RESIDUAL =================
+        { name: "Bóng đèn LED", type: "residual", desc: "Không tái chế thường.", main: ["đèn led"] },
+        { name: "Bóng đèn sợi đốt", type: "residual", desc: "Bỏ riêng.", main: ["đèn sợi đốt"] },
+        { name: "Ống tiêm", type: "residual", desc: "Nguy hiểm sinh học.", main: ["ống tiêm"] },
+        { name: "Bỉm", type: "residual", desc: "Không tái chế.", main: ["tã", "bỉm"] },
+        { name: "Giấy vệ sinh", type: "residual", desc: "Không tái chế.", main: ["giấy vệ sinh"] },
+        { name: "Khăn giấy bẩn", type: "residual", desc: "Không tái chế.", main: ["khăn giấy"] },
+        { name: "Vỏ snack", type: "residual", desc: "Nhựa nhiều lớp.", main: ["snack"] },
+        { name: "Bao bì mì gói", type: "residual", desc: "Khó tái chế.", main: ["mì gói"] },
+        { name: "Găng tay y tế", type: "residual", desc: "Nguy cơ sinh học.", main: ["găng tay"] },
+        { name: "Bàn chải đánh răng", type: "residual", desc: "Nhựa hỗn hợp.", main: ["bàn chải"] },
+        { name: "Đĩa CD", type: "residual", desc: "Khó tái chế.", main: ["cd"] },
+        { name: "Pin sạc", type: "residual", desc: "Cần xử lý riêng.", main: ["pin sạc"] },
+        { name: "Adapter hỏng", type: "residual", desc: "Rác điện tử.", main: ["adapter"] },
+        { name: "Tai nghe hỏng", type: "residual", desc: "Rác điện tử.", main: ["tai nghe"] },
+        { name: "Pin cũ", type: "residual", desc: "Chứa kim loại nặng, cần xử lý riêng.", main: ["pin", "pin cũ"] }, { name: "Đèn huỳnh quang", type: "residual", desc: "Chứa thủy ngân.", main: ["đèn", "huỳnh quang"] }, { name: "Khẩu trang", type: "residual", desc: "Có nguy cơ sinh học.", main: ["khẩu trang", "mặt nạ"] }
+
     ];
 
     // ================= DOM =================
