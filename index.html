@@ -151,7 +151,7 @@
     }
 
     /* =========================
-       TABLET (≥768px)
+        TABLET (≥768px)
     ========================= */
     @media (min-width: 768px) {
 
@@ -296,57 +296,81 @@
   </nav>
   <main class="pt-24">
     <!-- Hero Section -->
-    <section class="relative px-6 py-20 lg:py-32 overflow-hidden">
-      <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-        <div class="z-10">
-          <div class="w-full flex items-center justify-center gap-4">
-            <div class="w-12 h-12 flex items-center justify-center">
+    <section class="relative px-4 sm:px-6 py-16 lg:py-32 overflow-hidden">
+      <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+    
+        <div class="z-10 text-center lg:text-left">
+          
+          <!-- Header logos + badge -->
+          <div class="w-full flex flex-wrap items-center justify-center lg:justify-start gap-3">
+            
+            <div class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center">
               <img src="Ecoloop.jpg" class="max-w-full max-h-full object-contain" />
             </div>
+    
             <span
-              class="px-4 py-1.5 bg-tertiary-container text-on-tertiary-container rounded-full text-sm font-bold tracking-wide uppercase whitespace-nowrap">
+              class="px-3 py-1 sm:px-4 sm:py-1.5 bg-tertiary-container text-on-tertiary-container rounded-full text-xs sm:text-sm font-bold tracking-wide uppercase break-words text-center">
               Dự án sinh viên VJU 2024
             </span>
-            <div class="w-12 h-12 flex items-center justify-center">
+    
+            <div class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center">
               <img src="VJU.png" class="max-w-full max-h-full object-contain" />
             </div>
           </div>
-          <h1 class="text-5xl lg:text-7xl font-extrabold font-headline leading-tight tracking-tight text-primary mb-8">
-            Ecoloop – <br />
+    
+          <!-- Title -->
+          <h1 class="text-3xl sm:text-4xl lg:text-7xl font-extrabold font-headline leading-tight tracking-tight text-primary mt-6 mb-6">
+            Ecoloop
           </h1>
-          <p class="text-lg lg:text-xl text-on-surface-variant max-w-lg mb-10 leading-relaxed">
-            Kiến tạo lối sống bền vững thông qua nền tảng hướng dẫn phân loại rác trực quan dành riêng cho cộng đồng
-            sinh viên Đại học Việt Nhật.
+    
+          <!-- Description -->
+          <p class="text-base sm:text-lg lg:text-xl text-on-surface-variant max-w-full sm:max-w-lg mx-auto lg:mx-0 mb-8 leading-relaxed">
+            Kiến tạo lối sống bền vững thông qua nền tảng hướng dẫn phân loại rác trực quan dành riêng cho cộng đồng sinh viên Đại học Việt Nhật.
           </p>
-          <div class="flex flex-wrap gap-4">
-            <a href="/Sort/code.html"><button
-                class="bg-primary text-on-primary px-8 py-4 rounded-full font-bold text-lg hover:shadow-xl transition-all flex items-center gap-2">
-                Bắt đầu phân loại <span class="material-symbols-outlined">arrow_forward</span>
-              </button></a>
-            <a href="/We/code.html"><button
-                class="bg-secondary-container text-on-secondary-container px-8 py-4 rounded-full font-bold text-lg hover:bg-opacity-80 transition-all">
+    
+          <!-- Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <a href="/Sort/code.html">
+              <button class="w-full sm:w-auto bg-primary text-on-primary px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:shadow-xl transition-all flex items-center justify-center gap-2">
+                Bắt đầu phân loại 
+                <span class="material-symbols-outlined">arrow_forward</span>
+              </button>
+            </a>
+    
+            <a href="/We/code.html">
+              <button class="w-full sm:w-auto bg-secondary-container text-on-secondary-container px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-opacity-80 transition-all">
                 Tìm hiểu thêm
-              </button></a>
+              </button>
+            </a>
           </div>
+    
         </div>
-        <div class="relative">
-          <div class="absolute -top-20 -right-20 w-80 h-80 bg-primary-container/30 rounded-full blur-3xl"></div>
+    
+        <!-- Image -->
+        <div class="relative mt-10 lg:mt-0">
+          <div class="absolute -top-20 -right-20 w-60 sm:w-80 h-60 sm:h-80 bg-primary-container/30 rounded-full blur-3xl"></div>
+    
           <div class="relative rounded-xl overflow-hidden aspect-[4/5] shadow-2xl">
-            <img class="w-full h-full object-cover"
-              data-alt="vibrant group of smiling Vietnamese students in a bright campus garden holding green plants and eco-friendly bags"
-              src="/ON5RS90.jpg" />
+            <img class="w-full h-full object-cover" src="/ON5RS90.jpg" />
           </div>
+    
           <div
-            class="absolute -bottom-8 -left-8 bg-surface-container-lowest p-6 rounded-lg shadow-xl flex items-center gap-4 max-w-xs">
-            <div class="bg-tertiary-container p-3 rounded-full">
+            class="absolute -bottom-6 -left-4 sm:-bottom-8 sm:-left-8 bg-surface-container-lowest p-4 sm:p-6 rounded-lg shadow-xl flex items-center gap-3 sm:gap-4 max-w-[200px] sm:max-w-xs">
+            
+            <div class="bg-tertiary-container p-2 sm:p-3 rounded-full">
               <span class="material-symbols-outlined text-tertiary" data-weight="fill">recycling</span>
             </div>
+    
             <div>
-              <div class="text-2xl font-bold font-headline text-primary">500+ kg</div>
-              <div class="text-xs text-on-surface-variant">Rác thải đang chờ được phân loại – bắt đầu từ bạn</div>
+              <div class="text-lg sm:text-2xl font-bold font-headline text-primary">500+ kg</div>
+              <div class="text-[10px] sm:text-xs text-on-surface-variant">
+                Rác thải đang chờ được phân loại – bắt đầu từ bạn
+              </div>
             </div>
+    
           </div>
         </div>
+    
       </div>
     </section>
     <!-- Thực Trạng (The Problem) -->
@@ -489,15 +513,6 @@
             Hành trình xanh vì một tương lai bền vững.<br>
             Bắt đầu từ những hành động nhỏ nhất.
           </p>
-
-          <!-- Social icons - kiểu vuông bo tròn giống ảnh -->
-          <div class="flex gap-4 mt-8">
-            <a href="#"
-              class="w-10 h-10 bg-white dark:bg-[#2e7238]/10 hover:bg-[#2e7238]/10 rounded-3xl flex items-center justify-center text-2xl transition-all hover:scale-110 shadow-sm"><i
-                class="fa-brands fa-facebook text-blue-600 hover:scale-110 transition"></i></a>
-            <a href="#"
-              class="w-10 h-10 bg-white dark:bg-[#2e7238]/10 hover:bg-[#2e7238]/10 rounded-3xl flex items-center justify-center text-2xl transition-all hover:scale-110 shadow-sm">✉️</a>
-          </div>
         </div>
 
         <!-- Cột 2: KHÁM PHÁ -->
